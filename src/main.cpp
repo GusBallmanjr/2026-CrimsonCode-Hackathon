@@ -1,6 +1,3 @@
-#include "../include/Encrypt.hpp"
-#include "../include/Decrypt.hpp"
-#include "../include/HashFunction.hpp"
 #include "../include/FileWritting.hpp"
 
 #include <iostream>
