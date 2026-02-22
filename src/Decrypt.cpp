@@ -1,4 +1,4 @@
-/*
+﻿/*
  *  Decryption Module Implementation
  *  Authors: Jameson Scott, Gus Ballman
  *
