@@ -61,7 +61,7 @@ LRESULT CALLBACK FileDropWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPar
     return DefWindowProc(hwnd, msg, wParam, lParam);
 }
 
-int main()
+int gui_interface()
 {
     sf::RenderWindow window(sf::VideoMode({ 1000, 1000 }), "Encrypt");
 
@@ -118,4 +118,20 @@ int main()
     }
 
     return 0;
+}
+
+int terminal_interface(int argc, char* argv[]) {
+
+  return 0;
+}
+
+int main(int argc, char* argv[]) {
+  if (argv[1] == "--gui-interface") {
+    gui_interface();
+  }
+  else {
+    terminal_interface(argc, argv);
+  }
+
+  return 0;
 }
