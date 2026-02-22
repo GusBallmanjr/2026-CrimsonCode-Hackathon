@@ -16,7 +16,6 @@
 #define G 2063
 #define r 18
 
-// Encrypt Class
 class Encrypt
 {
 public:
