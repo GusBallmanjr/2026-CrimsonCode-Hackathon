@@ -1,5 +1,33 @@
-#pragma once
+/*
+ *  Utility & Cryptographic Support Functions
+ *  Authors: Jameson Scott, Gus Ballman
+ *
+ *  This file provides helper routines used across the encryption/decryption
+ *  workflow and the surrounding application logic. It includes:
+ *
+ *    + generateE(): derives the public value E (Part of Public Key) using modular
+ *      exponentiation with integer‑safe arithmetic.
+ *
+ *    + bin2hex(uint8_t): converts a 4‑bit nibble into its hexadecimal
+ *      character representation, suitable for debugging, display, or
+ *      serialization.
+ *
+ *    + bin2hex(int64_t, char[16]): expands a 64‑bit integer into a fixed
+ *      16‑character hexadecimal string by extracting each nibble from
+ *      most‑significant to least‑significant order.
+ *
+ *  These utilities support SFML‑based UI components, Windows drag‑and‑drop
+ *  integration, and the cryptographic modules Encrypt and Decrypt. All
+ *  operations are deterministic and avoid floating‑point math to maintain
+ *  correctness in embedded and cryptographic contexts.
+ */
 
+#pragma once
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+#include <windows.h>
+#include <shellapi.h>
+#include <stdlib.h>
 #include "Encrypt.hpp"
 #include "Decrypt.hpp"
 
@@ -33,6 +61,7 @@ char bin2hex(uint8_t binary)
     case 0xF: return 'F';
     }
 }
+
 void bin2hex(int64_t binary, char hex[16])
 {
     uint8_t nibble = 0;

@@ -1,3 +1,17 @@
+/*
+ *  Encryption Module Implementation
+ *  Authors: Jameson Scott, Gus Ballman
+ *
+ *  This file provides the implementation of the Encrypt class, including:
+ *    + Construction of the encryption object
+ *    + Generation of ciphertext components (c1, c2)
+ *    + Internal modular‑arithmetic routines for exponentiation‑based encryption
+ *
+ *  The encryption process uses integer‑safe modular exponentiation to avoid
+ *  precision loss and ensure deterministic behavior suitable for cryptographic
+ *  experimentation and embedded systems work.
+ */
+
 #include "Encrypt.hpp"
 
 Encrypt::Encrypt()
@@ -18,21 +32,4 @@ int64_t Encrypt::enc1()
 int64_t Encrypt::enc2(int32_t p, int8_t E)
 {
 	return p * modexp(E, r, P);
-}
-
-static int64_t modexp(int64_t base, int64_t exp, int64_t mod)
-{
-    int64_t result = 1;
-    base %= mod;
-
-    while (exp > 0)
-    {
-        if (exp & 1)
-            result = (result * base) % mod;
-
-        base = (base * base) % mod;
-        exp >>= 1;
-    }
-
-    return result;
 }
