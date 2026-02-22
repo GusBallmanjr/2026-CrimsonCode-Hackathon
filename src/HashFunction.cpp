@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cmath>
-#include <string>
+#include "../include/HashFunction.hpp"
 
 std::string hashPassword(std::string password) {
   
@@ -50,12 +48,3 @@ int hashToPrime(std::string hash) {
     }
     return candidate;
 }
-
-/*
-int main(void) {
-  std::string phrase = "Th1s1sMyV3ry!!S3cur3P@s$W0rd$g8";
-  std::cout << hashPassword(phrase) << std::endl;
-  
-  std::cout << std::endl << std::endl << "Prime Number: " << hashToPrime(phrase) << std::endl;
-  return 0;
-}*/
