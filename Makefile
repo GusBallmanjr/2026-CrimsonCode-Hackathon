@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -Wall -std=c++17
 TARGET = gorun
 INSTALL_DIR = $(HOME)/bin
-WRAPPER = joshua
+WRAPPER = ogre-enc
 
 SRCS = $(wildcard src/*.cpp)
 
