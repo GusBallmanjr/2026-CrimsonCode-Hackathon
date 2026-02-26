@@ -46,7 +46,7 @@ All operations are integer‑only and fully deterministic.
 ## Authors
 + **Gus Ballman**  
 + **Jameson Scott**
-+ Copilot (For Portions of UI)
++ Copilot (For portions of UI)
 
 ---
 
