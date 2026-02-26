@@ -1,12 +1,12 @@
 # 2026-CrimsonCode-Hackathon
 # OGRE Encryption
 
-Offline file‑encryption tool built by **Gus Ballman** and **Jameson Scott** for the **2026 CrimsonCode Hackathon** at **Washington State University**.
+Offline file‑encryption tool built by **Gus Ballman** and **Jamie Scott** for the **2026 CrimsonCode Hackathon** at **Washington State University**.
 
 ---
 
 ## Overview
-OGRE is a lightweight file‑encryption app built from scratch using C++, SFML, and our own integer‑safe math. The goal was to create a simple, fast, fully offline tool where the user can drag in a file, enter a password, and encrypt or decrypt it instantly. The UI stays minimal while all the real work happens under the hood.
+OGRE is a lightweight file‑encryption app built from scratch using C++, SFML, and our own integer‑safe math. The goal was to create a simple, fast, fully offline tool where the user can drag in a file, enter a password, and encrypt or decrypt it instantly. The UI stays minimal while all the real work happens under the hood. The UI was developed with Copiolot, while the core logic was written by the authors.
 
 ---
 
